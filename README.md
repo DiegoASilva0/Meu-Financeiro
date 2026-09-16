@@ -43,3 +43,9 @@ O APK pode ser encontrado na seção **Releases** deste repositório.
 ## 📌 Objetivo
 
 Projeto desenvolvido para praticar desenvolvimento web com JavaScript e criar uma aplicação completa utilizando armazenamento local e integração com Capacitor.
+
+## 🌐 Demonstração
+
+Acesse o projeto online:
+
+👉 https://diegoasilva0.github.io/Meu-Financeiro/www/index.html
