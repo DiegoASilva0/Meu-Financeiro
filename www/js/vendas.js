@@ -78,11 +78,6 @@ localStorage.setItem("msg_notificacao", "Venda Atualizada");
 
 produtoAdicionado.push(produto);
 
-/*
-  Salva o ano e o mês da venda atual.
-  Exemplo:
-  2026-09-16 → 2026-09
-*/
 localStorage.setItem(
   "mesSelecionado",
   produto.data.substring(0, 7)
