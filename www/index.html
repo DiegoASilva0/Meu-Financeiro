@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/navegacao.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Meu Financeiro</title>
+  </head>
+
+  <body>
+    <main id="app">
+      <section id="notificacao">
+        <div>
+          <span id="msg_notificacao">Venda adicionado com sucesso.</span>
+        </div>
+      </section>
+
+      <section class="principal">
+        <span>Controle Financeiro</span>
+
+        <h2>Meu Financeiro</h2>
+
+        <p>Acompanhe suas vendas e lucros</p>
+      </section>
+
+      <section id="mesAtual" class="card">
+        <span>MÊS ATUALIZADO</span>
+
+        <input type="month" name="mes-ano" id="mes" />
+      </section>
+
+      <section class="resumoMes">
+        <div class="titulo-secao">
+          <span>MÊS SELECIONADO</span>
+
+          <h1>Resumo do Mês</h1>
+        </div>
+
+        <div class="grid-container">
+          <div class="card card-info">
+            <span>Faturamento</span>
+            <p id="faturamentoMensal">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Gastos</span>
+            <p id="gastosMensal">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Taxas</span>
+            <p id="taxasMensal">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Vendas</span>
+            <p id="totalVendasMensal">0</p>
+          </div>
+        </div>
+
+        <div id="lucroLiquido" class="card-lucro">
+          <span>Lucro líquido</span>
+
+          <h2 id="lucroMensal">R$ 0,00</h2>
+
+          <span>Após gastos e taxas</span>
+        </div>
+      </section>
+
+      <section class="resumoAcumulado">
+        <div class="titulo-secao">
+          <span>DESDE A PRIMEIRA VENDA</span>
+
+          <h2>Resumo acumulado</h2>
+        </div>
+
+        <div id="lucroAcumulado" class="card-lucro">
+          <span>Lucro total acumulado</span>
+
+          <h2 id="lucroTotalAcumulado">R$ 0,00</h2>
+
+          <span>Total de lucro registrado</span>
+        </div>
+
+        <div class="grid-container">
+          <div class="card card-info">
+            <span>Faturamento total</span>
+            <p id="faturamentoTotal">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Taxas pagas</span>
+            <p id="taxasTotais">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Gastos totais</span>
+            <p id="gastosTotais">R$ 0,00</p>
+          </div>
+
+          <div class="card card-info">
+            <span>Total de vendas</span>
+            <p id="totalProdutosVendidos">0</p>
+          </div>
+        </div>
+
+        <div class="taxaVendas">
+          <span>Taxa utilizada</span>
+
+          <span class="text-blue"> 4,99% + R$ 0,20 por venda </span>
+        </div>
+      </section>
+
+      <section id="buttons">
+        <div id="buttons-app">
+          <div class="card-button">
+            <a href="index.html">
+              <button type="button">
+                <i class="fa-solid fa-house"></i>
+                <span>Inicio</span>
+              </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="adicionar.html">
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+                <span>Adicionar</span>
+              </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="vendas.html">
+              <button type="button">
+                <i class="fa-solid fa-bars"></i>
+                <span>Vendas</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/dados.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

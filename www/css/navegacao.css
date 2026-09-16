@@ -1,0 +1,527 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Cores */
+
+:root {
+    --cor-primaria: #3b82f6;
+    --cor-primaria-hover: #2563eb;
+    --cor-primaria-clara: #60a5fa;
+
+    --cor-sucesso: #22c55e;
+    --cor-sucesso-clara: #4ade80;
+    --cor-sucesso-fundo: rgba(34, 197, 94, 0.12);
+    --cor-sucesso-borda: rgba(34, 197, 94, 0.25);
+
+    --cor-fundo: #07111f;
+    --cor-fundo-secundario: #0b1929;
+
+    --cor-card: #10243b;
+    --cor-card-hover: #142d48;
+    --cor-card-destaque: #0d1e32;
+
+    --cor-borda: #1d3a57;
+    --cor-borda-clara: #285276;
+
+    --cor-texto: #f8fafc;
+    --cor-texto-secundario: #b8c7d9;
+    --cor-texto-fraco: #7f94aa;
+    --cor-texto-muted: #64748b;
+
+    --gradiente-primario: linear-gradient(
+        135deg,
+        #144aa1,
+        #134ece
+    );
+
+    --gradiente-sucesso: linear-gradient(
+        135deg,
+        #166534,
+        #14532d
+    );
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+
+main {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+    padding: 16px;
+}
+
+#app {
+    padding-bottom: 100px;
+}
+
+
+.principal {
+    margin-bottom: 20px;
+}
+
+.principal > span {
+    display: inline-block;
+
+    margin-bottom: 4px;
+
+    color: var(--cor-primaria-clara);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.principal > h2 {
+    margin-bottom: 4px;
+
+    color: var(--cor-texto);
+
+    font-size: 28px;
+}
+
+.principal > p {
+    color: var(--cor-texto-fraco);
+
+    font-size: 14px;
+}
+
+
+.text-blue {
+    color: var(--cor-primaria-clara);
+}
+
+
+/* Cards */
+
+.card {
+    background-color: var(--cor-card);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    background-color: var(--cor-card-hover);
+}
+
+
+#mesAtual {
+    padding: 16px;
+}
+
+#mesAtual > span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--cor-primaria-clara);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+#mes {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 10px;
+
+    outline: none;
+
+    background-color: var(--cor-card-destaque);
+    color: var(--cor-texto);
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+#mes:focus {
+    border-color: var(--cor-primaria);
+
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+
+.resumoMes,
+.resumoAcumulado {
+    margin-top: 24px;
+}
+
+
+.titulo-secao {
+    margin-bottom: 12px;
+}
+
+.titulo-secao > span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--cor-primaria-clara);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.titulo-secao > h1,
+.titulo-secao > h2 {
+    color: var(--cor-texto);
+}
+
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+.grid-container > .card {
+    padding: 16px;
+}
+
+.card-info {
+    background-color: var(--cor-fundo);
+}
+
+
+.card-info > span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--cor-texto-secundario);
+
+    font-size: 13px;
+}
+
+.card-info > p {
+    color: var(--cor-texto);
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* Destaques financeiros */
+
+#lucroLiquido {
+    margin-top: 12px;
+    padding: 16px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--gradiente-primario);
+
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.18);
+}
+
+.card-lucro > span {
+    display: block;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.card-lucro > h2 {
+    margin: 4px 0;
+
+    color: var(--cor-texto);
+
+    font-size: 24px;
+}
+
+
+#lucroAcumulado {
+    margin-top: 12px;
+    padding: 16px 20px;
+
+    border: 1.5px solid var(--cor-sucesso-borda);
+    border-radius: 10px;
+
+    background: var(--cor-fundo);
+}
+
+#lucroAcumulado > span:first-child {
+    color: #86efac;
+}
+
+#lucroAcumulado > h2 {
+    color: var(--cor-sucesso-clara);
+}
+
+
+.taxaVendas {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    width: 100%;
+
+    margin-top: 12px;
+    padding: 12px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+
+    background-color: var(--cor-card);
+
+    font-size: 12px;
+}
+
+.taxaVendas > span:first-child {
+    color: var(--cor-texto-secundario);
+}
+
+.taxaVendas > .text-blue {
+    font-weight: 600;
+    text-align: right;
+}
+
+#buttons {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+    max-width: 480px;
+
+    background: var(--cor-fundo-secundario);
+    border-top: 1px solid var(--cor-borda-clara);
+
+    padding: 6px 8px;
+    z-index: 1000;
+}
+
+#buttons-app {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.card-button {
+    flex: 1;
+}
+
+.card-button > a > button  {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+     
+    gap: 5px;
+    color: #888;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.card-button button {
+    width: 100%;
+    height: 60px;
+
+    gap: 5px;
+
+    border: none;
+    border-radius: 12px;
+
+    color: #888;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-button i {
+    font-size: 20px;
+}
+
+.card-button span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Quando passar o mouse */
+.card-button button:hover {
+    background: var(--gradiente-primario);
+    color: white;
+}
+
+/* Quando clicar */
+.card-button button:active {
+    transform: scale(0.92);
+}
+
+
+/*======================
+ ADICIONAR NOVAS VENDAS
+======================*/
+
+#pesquisarProduto {
+    background-color: #10243b;
+    border: 1px solid var(--cor-borda-clara);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#categoria {
+    background-color: #10243b;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#adicionarVendas {
+    background-color: var(--cor-card-destaque);
+    padding: 20px;
+}
+
+.card-input {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-clara);
+    color: var(--cor-texto-fraco);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#enviarVenda {
+    width: 100%;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 8px;
+    background-color: var(--cor-fundo-secundario);
+    font-weight: bold;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda-clara);
+}
+
+#enviarVenda:hover {
+    background-color: var(--cor-card-hover);
+}
+
+form > label {
+    font-size: 14px;
+}
+
+#data {
+    color: var(--cor-texto);
+}
+
+.mensagemVenda {
+    background-color: var(--cor-fundo-secundario);
+    border-radius: 15px;
+    padding: 15px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tituloPrincpal {
+    color: var(--cor-texto-secundario);
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloVenda {
+    color: var(--cor-texto);
+}
+
+
+.card-excluir {
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid red;
+    color: red;
+    
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.card-editar { 
+    background-color: var(--cor-card-destaque);
+    color: var(--cor-primaria-hover);
+    
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+
+}
+
+
+@media (max-width: 360px) {
+
+    main {
+        padding: 12px;
+    }
+
+    .grid-container {
+        gap: 4px;
+    }
+
+    .grid-container > .card {
+        padding: 12px;
+    }
+
+    .taxaVendas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .taxaVendas > .text-blue {
+        text-align: left;
+    }
+}

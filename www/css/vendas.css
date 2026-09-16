@@ -1,0 +1,101 @@
+/* =========================
+   PESQUISA
+========================= */
+
+#pesquisarProduto {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 10px;
+
+    background-color: var(--cor-card);
+    color: white;
+}
+
+
+/* =========================
+   CATEGORIA / ORDENAÇÃO
+========================= */
+
+#categoria {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 20px;
+
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 10px;
+
+    background-color: var(--cor-card);
+    color: white;
+}
+
+/* =========================
+   VENDAS
+========================= */
+
+#vendas {
+    width: 100%;
+}
+
+
+/* =========================
+   CARDS DAS VENDAS
+========================= */
+
+.mensagemVenda {
+    background-color: var(--cor-fundo-secundario);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+
+    padding: 15px;
+    margin-bottom: 15px;
+
+    justify-content: space-between;
+}
+
+.tituloPrincpal {
+    color: var(--cor-texto-secundario);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloVenda {
+    color: var(--cor-texto);
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.card-excluir {
+    background-color: rgba(255, 0, 0, 0.2);
+
+    border: 1px solid red;
+
+    color: red;
+
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.card-editar {
+    background-color: var(--cor-card-destaque);
+
+    color: var(--cor-primaria-hover);
+
+    font-weight: bolder;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}

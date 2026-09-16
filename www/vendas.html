@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!doctype html>
+    <html lang="pt-BR">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/vendas.css">
+        <link rel="stylesheet" href="css/navegacao.css">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <title>Meu Financeiro</title>
+      </head>
+
+      <body>
+        <main id="app">
+         
+
+          <section class="principal">
+            <span>HISTÓRICO</span>
+            <h2>Minhas vendas</h2>
+            <p>Consulte, edite ou exclua suas vendas.</p>
+          </section>
+
+          <section>
+            <input
+              type="text"
+              name="pesquisar"
+              id="pesquisarProduto"
+              placeholder="Pesquisar produto..."
+            />
+          </section>
+
+          <form>
+            <select id="categoria" name="categoria">
+              <option value="vendasRecentes">Vendas mais recentes</option>
+              <option value="vendasAntigas">Vendas mais antigas</option>
+              <option value="maiorLucro">Maior lucro</option>
+              <option value="maiorValordeVendas">Maior valor de venda</option>
+            </select>
+          </form>
+
+          <div id="vendas"></div>
+        </main>
+
+         <section id="buttons">
+        <div id="buttons-app">
+          <div class="card-button">
+              <a href="index.html">
+                <button type="button">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="adicionar.html">
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+                <span>Adicionar</span>
+              </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="vendas.html">
+              <button type="button">
+                <i class="fa-solid fa-bars"></i>
+                <span>Vendas</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+        <script src="js/dados.js"></script>
+        <script src="js/vendas.js"></script>
+        <script src="js/historico.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

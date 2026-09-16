@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/adicionar.css" />
+    <link rel="stylesheet" href="css/navegacao.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <title>Meu Financeiro</title>
+  </head>
+
+  <body>
+    <main id="app">
+      <section class="principal">
+        <span>NOVA MOVIMENTAÇÃO</span>
+
+        <h2>Adicionar venda</h2>
+
+        <p>Informe os dados da venda.</p>
+      </section>
+
+      <section id="adicionarVendas" class="card">
+        <form id="formVenda">
+          <label for="nome">Produto</label> <br />
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Ex: Nitro Mensal"
+            class="card-input"
+            required
+          />
+          <br />
+
+          <label for="valor">Valor da venda</label> <br />
+          <input
+            type="number"
+            name="valorVenda"
+            id="valorVenda"
+            placeholder="0,00"
+            class="card-input"
+            min="0"
+            inputmode="decimal"
+            required
+          />
+          <br />
+
+          <label for="gastos">Quanto você gastou</label> <br />
+          <input
+            type="number"
+            name="valorGasto"
+            id="valorGasto"
+            placeholder="0,00"
+            class="card-input"
+            min="0"
+            inputmode="decimal"
+            required
+          />
+          <br />
+
+          <label for="data">Data da venda</label> <br />
+          <input
+            type="date"
+            name="data"
+            id="data"
+            class="card-input"
+            required
+          />
+          <br />
+
+          <section class="resumoVenda">
+            <div class="grid-container">
+              <div class="card card-info">
+                <span>Taxa</span>
+                <p id="taxaCalculada">R$ 0,00</p>
+              </div>
+
+              <div class="card card-info">
+                <span>Você recebe</span>
+                <p id="valorReceber">R$ 0,00</p>
+              </div>
+            </div>
+
+            <div id="lucroAcumulado" class="card-lucro">
+              <span>Lucro estimado</span>
+              <h2 id="lucroEstimado">R$ 0,00</h2>
+            </div>
+          </section>
+
+          <button type="submit" id="enviarVenda">Adicionar Venda</button>
+        </form>
+      </section>
+
+      <section id="buttons">
+        <div id="buttons-app">
+          <div class="card-button">
+            <a href="index.html">
+              <button type="button">
+                <i class="fa-solid fa-house"></i>
+                <span>Inicio</span>
+              </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="adicionar.html">
+              <button type="button">
+                <i class="fa-solid fa-plus"></i>
+                <span>Adicionar</span>
+              </button>
+            </a>
+          </div>
+          <div class="card-button">
+            <a href="vendas.html">
+              <button type="button">
+                <i class="fa-solid fa-bars"></i>
+                <span>Vendas</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="mensagem"></div>
+
+    <script src="js/dados.js"></script>
+    <script src="js/vendas.js"></script>
+  </body>
+</html>
